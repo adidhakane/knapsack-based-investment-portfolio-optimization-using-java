@@ -1,0 +1,86 @@
+=== Investment Portfolio Optimization ===
+Risk Tolerance: 30.0
+
+Available Investment Options:
+Name                 Expected Return Risk Factor     Sector
+----------------------------------------------------------------------
+Tech Stock A         12.50           7.00            Technology     
+Bank Bond B          10.00           5.00            Finance        
+Real Estate Fund C   15.00           9.00            Real Estate    
+Healthcare ETF D     8.00            4.00            Healthcare     
+Energy Stock E       11.00           6.00            Energy
+Retail Bond F        9.50            5.50            Retail
+Tech Stock G         14.00           8.00            Technology     
+Finance ETF H        7.50            3.50            Finance        
+REIT I               13.00           7.50            Real Estate    
+Pharma Stock J       10.50           6.50            Healthcare     
+
+=== Dynamic Programming Approach ===
+Selected Investments:
+Name                 Expected Return Risk Factor     Sector
+----------------------------------------------------------------------
+Tech Stock A         12.50           7.00            Technology     
+Bank Bond B          10.00           5.00            Finance        
+Healthcare ETF D     8.00            4.00            Healthcare
+Energy Stock E       11.00           6.00            Energy
+Tech Stock G         14.00           8.00            Technology
+----------------------------------------------------------------------
+Total Expected Return: 55.50
+Total Risk: 30.00
+Execution Time: 2.912 ms
+
+=== Greedy Approach (for comparison) ===
+Selected Investments:
+Name                 Expected Return Risk Factor     Sector
+----------------------------------------------------------------------
+Finance ETF H        7.50            3.50            Finance
+Bank Bond B          10.00           5.00            Finance
+Healthcare ETF D     8.00            4.00            Healthcare
+Energy Stock E       11.00           6.00            Energy
+Tech Stock A         12.50           7.00            Technology
+----------------------------------------------------------------------
+Total Expected Return: 49.00
+Total Risk: 25.50
+Execution Time: 2.824 ms
+
+=== Branch and Bound with Constraints ===
+Selected Investments:
+Name                 Expected Return Risk Factor     Sector
+----------------------------------------------------------------------
+Finance ETF H        7.50            3.50            Finance
+Bank Bond B          10.00           5.00            Finance
+Tech Stock A         12.50           7.00            Technology
+Tech Stock G         14.00           8.00            Technology     
+Pharma Stock J       10.50           6.50            Healthcare
+----------------------------------------------------------------------
+Total Expected Return: 54.50
+Total Risk: 30.00
+Execution Time: 5.663 ms
+
+=== Comparison of Approaches ===
+Dynamic Programming: Return = 55.5, Risk = 30.0
+Greedy Approach: Return = 49.0, Risk = 25.5 (Difference from optimal: 6.5)
+Branch and Bound with Constraints: Return = 54.5, Risk = 30.0 (With sector diversificatio
+n constraints)                                                                           
+=== Risk-Return Analysis ===
+Dynamic Programming Return/Risk Ratio: 1.85
+Greedy Approach Return/Risk Ratio: 1.9215686274509804
+Branch and Bound Return/Risk Ratio: 1.8166666666666667
+
+=== Sector Diversification Analysis ===
+Dynamic Programming Sector Allocation:
+Energy         : 19.82% (Count: 1)
+Technology     : 47.75% (Count: 2)
+Finance        : 18.02% (Count: 1)
+Healthcare     : 14.41% (Count: 1)
+
+Greedy Approach Sector Allocation:
+Energy         : 22.45% (Count: 1)
+Technology     : 25.51% (Count: 1)
+Finance        : 35.71% (Count: 2)
+Healthcare     : 16.33% (Count: 1)
+
+Branch and Bound Sector Allocation:
+Technology     : 48.62% (Count: 2)
+Finance        : 32.11% (Count: 2)
+Healthcare     : 19.27% (Count: 1)
