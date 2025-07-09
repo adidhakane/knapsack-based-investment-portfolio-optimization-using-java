@@ -94,10 +94,10 @@ Risk-Return Ratios:
 - Branch & Bound: 1.52
 ```
 ## 🎯 Algorithm Comparison
-Algorithm	Optimality	Time Complexity	Constraints	Use Case
-Dynamic Programming	Optimal	O(n×W)	Basic	Standard optimization
-Greedy	Approximate	O(n log n)	Basic	Fast approximation
-Branch & Bound	Optimal	Exponential*	Advanced	Complex constraints
+
+- Dynamic Programming	Optimal	O(n×W)	Basic	Standard optimization
+- Greedy	Approximate	O(n log n)	Basic	Fast approximation
+- Branch & Bound	Optimal	Exponential*	Advanced	Complex constraints
 *With pruning for practical performance
 
 ## 🏆 Key Achievements
